@@ -1,9 +1,12 @@
 import React from 'react'
+import {Heading} from './Heading'
+import {UseList} from './UseList'
 
 export const Home = () => {
     return (
         <div>
-            <h2>React CRUD Sample Application</h2>
+            <Heading />
+            <UseList/>
         </div>
     )
 }
