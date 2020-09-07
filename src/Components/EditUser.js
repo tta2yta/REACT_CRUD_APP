@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const EditUsr = () => {
+export const EditUser = () => {
     return (
         <div>
             <h2>Edit User</h2>
