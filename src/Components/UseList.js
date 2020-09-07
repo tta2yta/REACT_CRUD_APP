@@ -8,8 +8,10 @@ export const UseList = () => {
     console.log(users)
     return (
         <ListGroup className="mt-3">
-            <ListGroupItem className="d-flex">
-                <strong>User One</strong>
+            {users.map(user => (
+
+            <ListGroupItem className="d-flex mb-2">
+                <strong>{user.name}</strong>
                 <div className='ml-auto'>
                     <Link to="/edit/1" className="btn btn-warning mr-1">Edit</Link>
                     <Button color="danger">Delete</Button>
@@ -17,6 +19,7 @@ export const UseList = () => {
                 
 
             </ListGroupItem>
+            ))}
             
         </ListGroup>
     )
