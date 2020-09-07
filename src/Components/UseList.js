@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import{Link} from 'react-router-dom'
+import{GlobalContext} from '../Context/GlobalState'
 import {ListGroup, ListGroupItem, Button} from 'reactstrap';
 
 export const UseList = () => {
+    const {users}=useContext(GlobalContext)
+    console.log(users)
     return (
-        <ListGroup>
+        <ListGroup className="mt-3">
             <ListGroupItem className="d-flex">
                 <strong>User One</strong>
                 <div className='ml-auto'>
