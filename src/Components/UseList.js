@@ -10,10 +10,10 @@ export const UseList = () => {
         <ListGroup className="mt-3">
             {users.map(user => (
 
-            <ListGroupItem className="d-flex mb-2">
+            <ListGroupItem key={user.id} className="d-flex mb-2">
                 <strong>{user.name}</strong>
                 <div className='ml-auto'>
-                    <Link key={user.id} to={`/edit/${user.id}`} className="btn btn-warning mr-1">Edit</Link>
+                    <Link  to={`/edit/${user.id}`} className="btn btn-warning mr-1">Edit</Link>
                     <Button color="danger" onClick={()=>removeUser(user.id)}>Delete</Button>
                 </div>
                 
