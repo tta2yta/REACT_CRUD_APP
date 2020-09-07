@@ -1,9 +1,10 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import {Link, useHistory} from 'react-router-dom';
 import{GlobalContext} from '../Context/GlobalState'
 import {Form, FormGroup, Input, Button, Label} from 'reactstrap';
 
 export const AddUser = () => {
+    const [name, setName]=useState('')
     const {addUser}=useContext(GlobalContext)
     const history= useHistory();
     const onSubmit=()=>{
@@ -11,11 +12,16 @@ export const AddUser = () => {
         addUser(newUser);
         history.push('/');
     }
+
+    const onchange=(e)=>{
+        setName(e.target.value)
+    }
     return (
       <Form onSubmit={onSubmit}>
           <FormGroup>
               <Label>Name</Label>
-              <Input type="text" placeholder="EnterName"></Input>
+              <Input type="text" name="name" placeholder="EnterName" value={name}
+               onChange={onchange}></Input>
           </FormGroup>
           <Button type="submit">Submit</Button>
           <Link to="/" className="btn btn-danger ml-2">Cancel</Link>
