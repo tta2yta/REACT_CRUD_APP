@@ -11,11 +11,11 @@ function App() {
     <div style={{maxWidth: "30rem", margin:"7em auto"}}>
       <GlobalProvider>
       <Router>
-          <switch>
+          <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/add" component={AddUser} />
           <Route path="/edit:id" component={EditUser} />
-        </switch>
+        </Switch>
     
       </Router>
       </GlobalProvider>
