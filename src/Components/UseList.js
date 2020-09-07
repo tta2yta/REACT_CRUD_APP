@@ -13,7 +13,7 @@ export const UseList = () => {
             <ListGroupItem className="d-flex mb-2">
                 <strong>{user.name}</strong>
                 <div className='ml-auto'>
-                    <Link to="/edit/1" className="btn btn-warning mr-1">Edit</Link>
+                    <Link key={user.id} to={`/edit/${user.id}`} className="btn btn-warning mr-1">Edit</Link>
                     <Button color="danger">Delete</Button>
                 </div>
                 
