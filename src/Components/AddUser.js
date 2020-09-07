@@ -1,9 +1,15 @@
 import React from 'react'
 
+import {Form, FormGroup, Input, Button, Label} from 'reactstrap'
+
 export const AddUser = () => {
     return (
-        <div>
-            <h2>Add New User</h2>
-        </div>
+      <Form>
+          <FormGroup>
+              <Label>Name</Label>
+              <Input type="text" placeholder="EnterName"></Input>
+          </FormGroup>
+          <Button type="submit">Submit</Button>
+      </Form>
     )
 }
