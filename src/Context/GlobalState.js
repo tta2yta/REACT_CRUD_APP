@@ -23,7 +23,7 @@ const removeUser =(id)=>{
 }
 
     return(
-        <GlobalContext.Provider value={{users: state.users}}>
+        <GlobalContext.Provider value={{users: state.users, removeUser}}>
             {children}
         </GlobalContext.Provider>
     )

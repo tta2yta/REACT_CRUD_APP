@@ -4,7 +4,7 @@ import{GlobalContext} from '../Context/GlobalState'
 import {ListGroup, ListGroupItem, Button} from 'reactstrap';
 
 export const UseList = () => {
-    const {users}=useContext(GlobalContext)
+    const {users, removeUser}=useContext(GlobalContext)
     console.log(users)
     return (
         <ListGroup className="mt-3">
@@ -14,7 +14,7 @@ export const UseList = () => {
                 <strong>{user.name}</strong>
                 <div className='ml-auto'>
                     <Link key={user.id} to={`/edit/${user.id}`} className="btn btn-warning mr-1">Edit</Link>
-                    <Button color="danger">Delete</Button>
+                    <Button color="danger" onClick={()=>removeUser(user.id)}>Delete</Button>
                 </div>
                 
 
